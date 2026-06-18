@@ -12,8 +12,18 @@ the state core for a training loop, simulation service, or another frontend.
 
 ## Setup
 
+This project uses a standard `src/` package layout. `uv sync` creates the
+virtual environment, installs development dependencies, and installs the local
+`hanoi_crossing` package into that environment.
+
 ```bash
 uv sync
+```
+
+After syncing, the package can be imported from Python:
+
+```bash
+uv run python -c "from hanoi_crossing import HanoiCrossingState; print(HanoiCrossingState(1))"
 ```
 
 Run tests:
@@ -25,6 +35,12 @@ uv run pytest
 ## CLI
 
 The package is executable with `python -m hanoi_crossing`.
+
+It also exposes a console script:
+
+```bash
+uv run hanoi-crossing replay --example n1
+```
 
 Run the built-in replay example, without creating an input file:
 

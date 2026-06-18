@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "hanoi-crossing"
 version = "0.1.0"
@@ -5,6 +9,9 @@ description = "Reusable Python engine and CLI frontends for Hanoi Crossing"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
+
+[project.scripts]
+hanoi-crossing = "hanoi_crossing.cli:main"
 
 [dependency-groups]
 dev = [

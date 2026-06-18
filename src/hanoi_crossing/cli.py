@@ -6,7 +6,7 @@ from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
 
-from .engine import HanoiCrossingState, Move, Turn
+from hanoi_crossing.engine import HanoiCrossingState, Move, Turn
 
 
 EXAMPLES: dict[str, dict[str, Any]] = {
