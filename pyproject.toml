@@ -1,7 +1,18 @@
 [project]
 name = "hanoi-crossing"
 version = "0.1.0"
-description = "Add your description here"
+description = "Reusable Python engine and CLI frontends for Hanoi Crossing"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.uv]
+package = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
