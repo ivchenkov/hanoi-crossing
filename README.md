@@ -34,13 +34,7 @@ uv run pytest
 
 ## CLI
 
-The package is executable with `python -m hanoi_crossing`.
-
-It also exposes a console script:
-
-```bash
-uv run hanoi-crossing replay --example n1
-```
+The primary CLI entry point is `python -m hanoi_crossing`.
 
 Run the built-in replay example, without creating an input file:
 
@@ -70,6 +64,12 @@ Use random player selection instead of alternating player selection:
 
 ```bash
 uv run python -m hanoi_crossing random --n 3 --seed 42 --max-steps 200 --turn-order random
+```
+
+The package also exposes an equivalent console script:
+
+```bash
+uv run hanoi-crossing replay --example n1
 ```
 
 ## Replay Input Format
